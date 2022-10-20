@@ -146,7 +146,7 @@ section{
     flex-wrap: wrap;
 }
 
-.about .title{
+section .title{
     text-align: center;
     display: inline-block;
     padding-bottom: 10px;
@@ -155,21 +155,6 @@ section{
     border-bottom: 3px solid #111;
     margin-bottom: 10px;
 }
-
-/* .about .title{
-    border-bottom: 2px solid black;
-} */
-
-/* .about .title::before{
-    content: "";
-    position: absolute;
-    width: 180px;
-    height: 3px;
-    background: #111;
-    bottom: 0px;
-    left: 50%;
-    transform: translateX(-50%);
-} */
 
 .about .about-content{
     display: flex;
@@ -215,6 +200,53 @@ section{
 .about .about-content .right .text a:hover{
     background: none;
     color: crimson;
+}
+
+/* services section styling */
+.services{
+    background: #111;
+    color: #fff;
+}
+.serv-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.services .serv-content .card{
+    width: calc(33% - 20px);
+    min-width: 300px;
+    background: #222;
+    margin: 10px;
+    text-align: center;
+    border-radius: 6px;
+    padding: 20px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.services .serv-content .card i{
+    font-size: 50px;
+    color: #fff;
+    color: crimson;
+}
+
+.services .serv-content .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7;
+}
+
+.services .serv-content .card .box{
+    transition: all 0.3s ease;
+}
+
+.services .serv-content .card:hover .box{
+    transform: scale(1.05);
+}
+
+.services .serv-content .card:hover{
+    background: crimson;
 }
 
 /* responsive media queries */
@@ -279,6 +311,10 @@ section{
     .about .about-content .column{
         width: 50%;
     }
+    .services .serv-content .card{
+        width: calc(50%-10px);
+        margin-bottom: 20px;
+    }
 }
 
 @media (max-width:690px){
@@ -305,6 +341,10 @@ section{
     }
     .about .about-content .right{
         flex: 100%;
+    }
+    .services .serv-content .card{
+        width: 100%;
+        margin-bottom: 20px;
     }
 }
 @media (max-width:500px){
