@@ -126,6 +126,97 @@
     transform: scale(1.02);
 }
 
+/* about section styling */
+
+section{
+    padding: 100px 0;
+}
+
+.about .about-content .left img{
+    height: 400px;
+    width: 400px;
+    background: red;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.title-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.about .title{
+    text-align: center;
+    display: inline-block;
+    padding-bottom: 10px;
+    font-size: 40px;
+    font-weight: 500;
+    border-bottom: 3px solid #111;
+    margin-bottom: 10px;
+}
+
+/* .about .title{
+    border-bottom: 2px solid black;
+} */
+
+/* .about .title::before{
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 3px;
+    background: #111;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+} */
+
+.about .about-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about .about-content .left{
+    width: 45%;
+}
+.about .about-content .right{
+    width: 55%;
+}
+
+.about .about-content .right .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.about .about-content .right .text #prakashad{
+    font-weight: 600;
+    display: inline-block;
+    padding: 5px;
+}
+
+.about .about-content .right .text span{
+    color: crimson;
+}
+
+.about .about-content .right .text a{
+    background: crimson;
+    color: #fff;
+    font-size: 20px;
+    margin-top: 20px;
+    padding: 12px 36px;
+    border-radius: 6px;
+    border: 3px solid crimson;
+    transition: all 0.3s ease;
+}
+
+.about .about-content .right .text a:hover{
+    background: none;
+    color: crimson;
+}
+
 /* responsive media queries */
  @media (max-width:1104px){
     .home .max-width{
@@ -185,6 +276,9 @@
     .home .home-content .text-3{
         font-size: 35px;
     }
+    .about .about-content .column{
+        width: 50%;
+    }
 }
 
 @media (max-width:690px){
@@ -201,6 +295,17 @@
         font-size: 20px;
         padding: 8px 20px;
     }
+    .about .about-content .column{
+        width: 50%;
+    }
+    .about .about-content .left{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+    .about .about-content .right{
+        flex: 100%;
+    }
 }
 @media (max-width:500px){
     .home .home-content .text-2{
@@ -208,5 +313,11 @@
     }
     .home .home-content .text-3{
         font-size: 27px;
+    }
+}
+@media (max-width:1104){
+    .about .about-content .left img{
+        width: 350px;
+        height: 350px;
     }
 }
