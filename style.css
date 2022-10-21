@@ -207,7 +207,7 @@ section .title{
     background: #111;
     color: #fff;
 }
-.serv-content{
+.serv-content, .skills .skills-content{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -247,6 +247,92 @@ section .title{
 
 .services .serv-content .card:hover{
     background: crimson;
+}
+
+/* skill section styling */
+
+.skills .skills-content .column{
+    width: calc(50% - 30px);
+    margin: 10px;
+}
+
+.skills .skills-content .right{
+    position: relative;
+    align-items: center;
+}
+
+.skills .skills-content .left{
+
+    text-align: justify;
+}
+
+.skills .skills-content .left a{
+    background: crimson;
+    color: #fff;
+    font-size: 18px;
+    margin-top: 15px;
+    padding: 8px 28px;
+    border-radius: 6px;
+    border: 3px solid crimson;
+    display: inline-block;
+    transition: all 0.3s ease;
+    margin-bottom: 15px;
+}
+
+.skills .skills-content .left a:hover{
+    background: none;
+    color: crimson;
+}
+
+.skills .skills-content .left .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.skills .skills-content .right .bars{
+    margin-bottom: 15px;
+}
+
+.skills .skills-content .right .info{
+    display: flex;
+    align-items: center;justify-content: space-between;
+}
+
+.skills .skills-content .right span{
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.skills .skills-content .right .line{
+    height: 5px;
+    width: 100%;
+    background: lightgray;
+    position: relative;
+    margin-bottom: 5px;
+}
+
+.skills .skills-content .right .line::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 80%;
+    left: 0;
+    top: 0;
+    background: crimson;
+}
+
+.skills .skills-content .right .html::before{
+    width: 90%;
+}
+.skills .skills-content .right .css::before{
+    width: 80%;
+}
+.skills .skills-content .right .javascript::before{
+    width: 70%;
+}
+.skills .skills-content .right .webdevelopment::before{
+    width: 80%;
 }
 
 /* responsive media queries */
@@ -346,6 +432,9 @@ section .title{
         width: 100%;
         margin-bottom: 20px;
     }
+    .skills .skills-content .column{
+        width: 100%;
+    }
 }
 @media (max-width:500px){
     .home .home-content .text-2{
@@ -361,3 +450,4 @@ section .title{
         height: 350px;
     }
 }
+
