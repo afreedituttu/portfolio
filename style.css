@@ -12,6 +12,10 @@
     margin: auto;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 /* navbar styling */
 
 .navbar{
@@ -136,7 +140,6 @@ section{
 .about .about-content .left img{
     height: 400px;
     width: 400px;
-    background: red;
     object-fit: cover;
     border-radius: 6px;
 }
@@ -144,7 +147,6 @@ section{
 .title-container{
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
 }
 
 section .title{
@@ -263,7 +265,6 @@ section .title{
 }
 
 .skills .skills-content .left{
-
     text-align: justify;
 }
 
@@ -451,12 +452,12 @@ section .title{
 
 .contact .right form .button{
     height: 47px;
-    width: 100%;
+    display: inline-block;
 }
 
 .contact .right form .button button{
-    width: 100%;
-    height: 100%;
+    padding: 8px 15px;
+    margin-top: 10px;
     border: 2px solid crimson;
     background: crimson;
     color: #fff;
@@ -479,8 +480,47 @@ section .title{
     margin-left: 10px;
 }
 
+/* footer styling */
+
+footer{
+    background: #111;
+    padding: 40px 23px;
+    display: flex;
+    justify-content: center;
+}
+
+footer span a{
+    color: crimson;
+}
+
+footer span{
+    color: #fff;
+}
+
+.scroll-up-btn{
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background: crimson;
+    right: 30px;
+    bottom: 30px;
+    color: a;
+    text-align: center;
+    line-height: 45px;
+    border: 6px solid crimson;
+    cursor: pointer;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.scroll-up-btn.show{
+    opacity: 1;
+    bottom: 30px;
+    pointer-events: auto;
+}
+
 /* responsive media queries */
- @media (max-width:1104px){
+@media (max-width:1104px){
     .home .max-width{
         margin-left: 0px;
     }
